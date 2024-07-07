@@ -8,9 +8,9 @@ import EditProductPage from './features/products/EditProductPage';
 
 const App: React.FC = () => {
   return (
-      <Provider store={store}> //Включает Redux хранилище для всех компонентов
-        <Router> //Для маршрутизации
-          <Routes> //Все маршруты приложения
+      <Provider store={store}>
+        <Router>
+          <Routes>
             <Route path="/products/create" element={<CreateProductPage/>} />
             <Route path="/products/edit/:id" element={<EditProductPage/>} />
             <Route path="/products" element={<ProductsPage/>} />
