@@ -12,7 +12,7 @@ interface QuillEditorProps {
     onChange: (content: string) => void;
 }
 
-const QuillEditor: React.FC<QuillEditorProps> = ({ initialContent, onChange }) => {
+const QuillEditor = ({ initialContent, onChange }:QuillEditorProps) => {
     const [editorState, setEditorState] = useState(initialContent);//Состояние содержимого
 
     //Обновление состояния редактора, когда initialContent изменяется

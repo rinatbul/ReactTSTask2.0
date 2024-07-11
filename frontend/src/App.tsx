@@ -2,11 +2,11 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { store } from './store';
-import ProductsPage from './features/products/ProductsPage';
-import CreateProductPage from './features/products/CreateProductPage';
-import EditProductPage from './features/products/EditProductPage';
+import ProductsPage from './components/ProductsPage';
+import CreateProductPage from './components/CreateProductPage';
+import EditProductPage from './components/EditProductPage';
 
-const App: React.FC = () => {
+const App = () => {
   return (
       <Provider store={store}>
         <Router>

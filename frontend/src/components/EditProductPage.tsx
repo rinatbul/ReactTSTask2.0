@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate, useParams } from 'react-router-dom';
-import { RootState, AppDispatch } from '../../store';
+import { RootState, AppDispatch } from '../store';
 import { fetchProducts, updateProduct } from './productsSlice';
 import axios from 'axios';
 import { TextField, Button, Select, MenuItem, FormControl, InputLabel, Paper, Typography, Container } from '@mui/material';
@@ -17,7 +17,7 @@ import QuillEditor from './QuillEditor';
 отправить данные на сервер для сохранения изменений.
  */
 
-const EditProductPage: React.FC = () => {
+const EditProductPage = () => {
     const { id } = useParams<{ id: string }>();//Параметр маршрута
     const dispatch: AppDispatch = useDispatch();//Отправка actions в Redux
     const navigate = useNavigate();//Навигация между страницами

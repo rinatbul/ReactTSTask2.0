@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { RootState, AppDispatch } from '../../store';
+import { RootState, AppDispatch } from '../store';
 import { fetchProducts, deleteProduct } from './productsSlice';
 import { Container, Typography, IconButton, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, TextField, Button, Pagination } from '@mui/material';
 import EditIcon from '@mui/icons-material/Edit';
@@ -17,7 +17,7 @@ import DeleteIcon from '@mui/icons-material/Delete';
 ----------------------------------------------------
  */
 
-const ProductsPage: React.FC = () => {
+const ProductsPage = () => {
     const dispatch: AppDispatch = useDispatch(); //Для отравки actions
     //useSelector - состояние из Redux
     const products = useSelector((state: RootState) => state.products.products);

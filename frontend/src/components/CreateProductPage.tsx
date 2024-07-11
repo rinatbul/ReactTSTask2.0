@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { AppDispatch } from '../../store';
+import { AppDispatch } from '../store';
 import { fetchProducts } from './productsSlice';
 import axios from 'axios';
 import { TextField, Button, Select, MenuItem, FormControl, InputLabel, Paper, Typography, Container } from '@mui/material';
@@ -12,7 +12,7 @@ import QuillEditor from './QuillEditor'; // Редактор Quill
 загрузить изображение, указать цену и статус,
 отправить эти данные на сервер для создания нового товара.
  */
-const CreateProductPage: React.FC = () => {
+const CreateProductPage = () => {
     const dispatch: AppDispatch = useDispatch();//Отправка actions в Redux
     const navigate = useNavigate();//Навигация между страницами(Routes)
 
